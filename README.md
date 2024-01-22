@@ -6,71 +6,59 @@ This project is developed using Sequelize, PostgreSQL, and NestJS. It is designe
 
 The application provides a set of API endpoints that can be accessed and tested using the provided Postman collection. Below is the output from the Postman collection, which provides information on the basic usage of the APIs.
 
-## Postman Collection
+# Postman Collection: userAdreses
 
-### 1. createUser
+## createUser
 
-- **HTTP Method**: POST
-- **URL**: `http://localhost:3000/api/user/createUser`
-- **Parameters**:
-  - `firstName`: ahmet (text)
-  - `lastName`: yilmaz (text)
-  - `email`: test1@gmail.com (text)
-- **Response**: []
+- **Method:** POST
+- **Endpoint:** http://localhost:3000/api/user/createUser
+- **Body:**
+  - firstName: mehmet
+  - lastName: yilmaz
+  - email: test1@gmail.com
+  - phoneNumber: 5555555554
+  - gender: male
+  - password: test123
+- **Response:**
+  - [Example Response](#example-response)
 
-### 2. updateUser
+## updateUser
 
-- **HTTP Method**: PUT
-- **URL**: `http://localhost:3000/api/user/updateUser`
-- **Parameters**:
-  - `email`: test@gmail.com (text)
-  - `firstName`: updateAhmet (text)
-- **Response**: []
+- **Method:** PUT
+- **Endpoint:** http://localhost:3000/api/user/updateUser
+- **Body:**
+  - email: test2@gmail.com
+  - firstName: updateZeynep
+  - lastName: updateYilmaz
+  - gender: female
+- **Response:**
+  - [Example Response](#example-response)
 
-### 3. deleteUser
+## deleteUser
 
-- **HTTP Method**: DELETE
-- **URL**: `http://localhost:3000/api/user/deleteUser`
-- **Parameters**:
-  - `email`: test@gmail.com (text)
-- **Response**: []
+- **Method:** DELETE
+- **Endpoint:** http://localhost:3000/api/user/deleteUser
+- **Body:**
+  - email: test@gmail.com
+- **Response:**
+  - [Example Response](#example-response)
 
-### 4. addAddresses
+## addAddresses
 
-- **HTTP Method**: POST
-- **URL**: `http://localhost:3000/api/user/addAddresses`
-- **Parameters**:
-  - `address`: test (text)
-  - `email`: test1@gmail.com (text)
-- **Response**: []
+- **Method:** POST
+- **Endpoint:** http://localhost:3000/api/user/addAddresses
+- **Body:**
+  - address: izmir
+  - email: test1@gmail.com
+- **Response:**
+  - [Example Response](#example-response)
 
-### 5. updateAddress
+## Example Response
 
-- **HTTP Method**: PUT
-- **URL**: `http://localhost:3000/api/user/updateAddress`
-- **Parameters**:
-  - `email`: test1@gmail.com (text)
-  - `addressId`: c74146d0-b945-11ee-8a08-7d03f83d6d58 (text)
-  - `address`: istanbul (text)
-- **Response**: []
-
-### 6. deleteAddress
-
-- **HTTP Method**: DELETE
-- **URL**: `http://localhost:3000/api/user/deleteAddress`
-- **Parameters**:
-  - `email`: test1@gmail.com (text)
-  - `addressId`: 4495fc70-b94b-11ee-aec1-bfc101b6ad57 (text)
-- **Response**: []
-
-### 7. findAllUsers
-
-- **HTTP Method**: GET
-- **URL**: `http://localhost:3000/api/user/findAll`
-- **Response**: []
-
-### 8. findOneUser
-
-- **HTTP Method**: GET
-- **URL**: `http://localhost:3000/api/user/findOne?email=test@gmail.com`
-- **Response**: []
+```json
+{
+    "code": 200,
+    "error": false,
+    "success": true,
+    "data": [...]
+}
