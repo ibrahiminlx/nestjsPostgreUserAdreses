@@ -89,9 +89,41 @@ The application provides a set of API endpoints that can be accessed and tested 
   - email: test1@gmail.com
 - **Response:**
   - [Example Response](#example-response)
+## updateAddress
+
+- **Method:** PUT
+- **Endpoint:** http://localhost:3000/api/user/updateAddress
+- **Body:**
+  - addressId: d2902dc0-b95f-11ee-ab47-5f398103e3ff
+  - address: updateAnkara
+- **Response:**
+  - [Example Response](#example-response)
+
+## deleteAddresses
+
+- **Method:** DELETE
+- **Endpoint:** http://localhost:3000/api/user/deleteAddress
+- **Body:**
+  - addressId: d2902dc0-b95f-11ee-ab47-5f398103e3ff
+- **Response:**
+  - [Example Response](#example-response)
+
+## findAllAddresses
+
+- **Method:** GET
+- **Endpoint:** http://localhost:3000/api/user/findAllAddresses
+- **Response:**
+  - [Example Response](#example-response)
+
+## findOneAddress
+
+- **Method:** GET
+- **Endpoint:** http://localhost:3000/api/user/findOneAddress/d2902dc0-b95f-11ee-ab47-5f398103e3ff
+- **Response:**
+  - [Example Response](#example-response)
 
 ## Example Response
-
+...json
 {
     "code": 200,
     "error": false,
