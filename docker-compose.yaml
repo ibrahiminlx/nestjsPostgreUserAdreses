@@ -1,0 +1,52 @@
+version: "3.8"
+services:
+  userDb:
+    image: postgres:15-alpine
+    container_name: userDb
+    environment:
+      - POSTGRES_DB=userDb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    networks:
+      - userNetwork
+    ports:
+      - '5432:5432'
+    volumes:
+      - userDb:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  userpgadmin:
+    image: dpage/pgadmin4
+    container_name: userPgAdmin
+    restart: always
+    networks:
+      - userNetwork
+    ports:
+      - '5050:80'
+    environment:
+      PGADMIN_DEFAULT_EMAIL: test@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: test123
+    volumes:
+      - userpgadmin:/var/lib/pgadmin
+    depends_on:
+      userDb:
+        condition: service_healthy
+volumes:
+  userDb:
+    name: userDbVolume
+    driver: local
+  userpgadmin:
+    name: userPgadminVolume
+
+
+networks:
+  userNetwork:
+    name: userNetwork
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.65.0.0/24
+          gateway: 172.65.0.1
