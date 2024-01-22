@@ -1,73 +1,76 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# User Addresses Project
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Project Description
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+This project is developed using Sequelize, PostgreSQL, and NestJS. It is designed to allow users to have multiple addresses. Users can add, update, delete, and view information related to their addresses.
 
-## Description
+The application provides a set of API endpoints that can be accessed and tested using the provided Postman collection. Below is the output from the Postman collection, which provides information on the basic usage of the APIs.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Postman Collection
 
-## Installation
+### 1. createUser
 
-```bash
-$ npm install
-```
+- **HTTP Method**: POST
+- **URL**: `http://localhost:3000/api/user/createUser`
+- **Parameters**:
+  - `firstName`: ahmet (text)
+  - `lastName`: yilmaz (text)
+  - `email`: test1@gmail.com (text)
+- **Response**: []
 
-## Running the app
+### 2. updateUser
 
-```bash
-# development
-$ npm run start
+- **HTTP Method**: PUT
+- **URL**: `http://localhost:3000/api/user/updateUser`
+- **Parameters**:
+  - `email`: test@gmail.com (text)
+  - `firstName`: updateAhmet (text)
+- **Response**: []
 
-# watch mode
-$ npm run start:dev
+### 3. deleteUser
 
-# production mode
-$ npm run start:prod
-```
+- **HTTP Method**: DELETE
+- **URL**: `http://localhost:3000/api/user/deleteUser`
+- **Parameters**:
+  - `email`: test@gmail.com (text)
+- **Response**: []
 
-## Test
+### 4. addAddresses
 
-```bash
-# unit tests
-$ npm run test
+- **HTTP Method**: POST
+- **URL**: `http://localhost:3000/api/user/addAddresses`
+- **Parameters**:
+  - `address`: test (text)
+  - `email`: test1@gmail.com (text)
+- **Response**: []
 
-# e2e tests
-$ npm run test:e2e
+### 5. updateAddress
 
-# test coverage
-$ npm run test:cov
-```
+- **HTTP Method**: PUT
+- **URL**: `http://localhost:3000/api/user/updateAddress`
+- **Parameters**:
+  - `email`: test1@gmail.com (text)
+  - `addressId`: c74146d0-b945-11ee-8a08-7d03f83d6d58 (text)
+  - `address`: istanbul (text)
+- **Response**: []
 
-## Support
+### 6. deleteAddress
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- **HTTP Method**: DELETE
+- **URL**: `http://localhost:3000/api/user/deleteAddress`
+- **Parameters**:
+  - `email`: test1@gmail.com (text)
+  - `addressId`: 4495fc70-b94b-11ee-aec1-bfc101b6ad57 (text)
+- **Response**: []
 
-## Stay in touch
+### 7. findAllUsers
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- **HTTP Method**: GET
+- **URL**: `http://localhost:3000/api/user/findAll`
+- **Response**: []
 
-## License
+### 8. findOneUser
 
-Nest is [MIT licensed](LICENSE).
+- **HTTP Method**: GET
+- **URL**: `http://localhost:3000/api/user/findOne?email=test@gmail.com`
+- **Response**: []
