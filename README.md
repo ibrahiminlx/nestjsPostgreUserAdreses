@@ -8,7 +8,7 @@ The application provides a set of API endpoints that can be accessed and tested 
 
 # User Addresses
 
-## createUser
+## Create User
 
 - **Method:** POST
 - **Endpoint:** http://localhost:3000/api/user/createUser
@@ -22,7 +22,7 @@ The application provides a set of API endpoints that can be accessed and tested 
 - **Response:**
   - [Example Response](#example-response)
 
-## updateUser
+## Update User
 
 - **Method:** PUT
 - **Endpoint:** http://localhost:3000/api/user/updateUser
@@ -34,7 +34,7 @@ The application provides a set of API endpoints that can be accessed and tested 
 - **Response:**
   - [Example Response](#example-response)
 
-## deleteUser
+## Delete User
 
 - **Method:** DELETE
 - **Endpoint:** http://localhost:3000/api/user/deleteUser
@@ -43,14 +43,14 @@ The application provides a set of API endpoints that can be accessed and tested 
 - **Response:**
   - [Example Response](#example-response)
  
-## userFindAll
+## Users Find All
 
 - **Method:** GET
 - **Endpoint:** http://localhost:3000/api/user/findAllUsers
 - **Response:**
   - [Example Response](#example-response)
 
-## userFindOne
+## User Find One
 
 - **Method:** GET
 - **Endpoint:** http://localhost:3000/api/user/findOneUser/test2@gmail.com
@@ -59,7 +59,7 @@ The application provides a set of API endpoints that can be accessed and tested 
 - **Response:**
   - [Example Response](#example-response)
 
-## updateUserPassword
+## Update User Password
 
 - **Method:** PUT
 - **Endpoint:** http://localhost:3000/api/user/updateUserPassword
@@ -70,7 +70,7 @@ The application provides a set of API endpoints that can be accessed and tested 
 - **Response:**
   - [Example Response](#example-response)
 
-## updateUserPhoneNumber
+## Update User PhoneNumber
 
 - **Method:** PUT
 - **Endpoint:** http://localhost:3000/api/user/updateUserPhoneNumber
@@ -80,7 +80,7 @@ The application provides a set of API endpoints that can be accessed and tested 
 - **Response:**
   - [Example Response](#example-response)
 
-## addAddresses
+## Add Addresses
 
 - **Method:** POST
 - **Endpoint:** http://localhost:3000/api/user/addAddresses
@@ -89,7 +89,7 @@ The application provides a set of API endpoints that can be accessed and tested 
   - email: test1@gmail.com
 - **Response:**
   - [Example Response](#example-response)
-## updateAddress
+## Update Address
 
 - **Method:** PUT
 - **Endpoint:** http://localhost:3000/api/user/updateAddress
@@ -99,7 +99,7 @@ The application provides a set of API endpoints that can be accessed and tested 
 - **Response:**
   - [Example Response](#example-response)
 
-## deleteAddresses
+## Delete Addresses
 
 - **Method:** DELETE
 - **Endpoint:** http://localhost:3000/api/user/deleteAddress
@@ -108,14 +108,14 @@ The application provides a set of API endpoints that can be accessed and tested 
 - **Response:**
   - [Example Response](#example-response)
 
-## findAllAddresses
+## Find All Addresses
 
 - **Method:** GET
 - **Endpoint:** http://localhost:3000/api/user/findAllAddresses
 - **Response:**
   - [Example Response](#example-response)
 
-## findOneAddress
+## Find One Address
 
 - **Method:** GET
 - **Endpoint:** http://localhost:3000/api/user/findOneAddress/d2902dc0-b95f-11ee-ab47-5f398103e3ff
