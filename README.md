@@ -42,6 +42,43 @@ The application provides a set of API endpoints that can be accessed and tested 
   - email: test@gmail.com
 - **Response:**
   - [Example Response](#example-response)
+ 
+## userFindAll
+
+- **Method:** GET
+- **Endpoint:** http://localhost:3000/api/user/findAllUsers
+- **Response:**
+  - [Example Response](#example-response)
+
+## userFindOne
+
+- **Method:** GET
+- **Endpoint:** http://localhost:3000/api/user/findOneUser/test2@gmail.com
+- **Query Parameters:**
+  - email (disabled): test@gmail.com
+- **Response:**
+  - [Example Response](#example-response)
+
+## updateUserPassword
+
+- **Method:** PUT
+- **Endpoint:** http://localhost:3000/api/user/updateUserPassword
+- **Body:**
+  - email: test2@gmail.com
+  - oldPassword: test123
+  - newPassword: updatePassword
+- **Response:**
+  - [Example Response](#example-response)
+
+## updateUserPhoneNumber
+
+- **Method:** PUT
+- **Endpoint:** http://localhost:3000/api/user/updateUserPhoneNumber
+- **Body:**
+  - phoneNumber: 5555555555
+  - email: test2@gmail.com
+- **Response:**
+  - [Example Response](#example-response)
 
 ## addAddresses
 
@@ -55,7 +92,6 @@ The application provides a set of API endpoints that can be accessed and tested 
 
 ## Example Response
 
-```json
 {
     "code": 200,
     "error": false,
