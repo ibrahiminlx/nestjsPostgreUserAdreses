@@ -12,16 +12,7 @@ export class AddresesUpdateDto {
   @Transform(({ value }) => value.trim())
   address:string
 
-  @IsString({
-    message:'String type field.'
-  })
-  @IsNotEmpty({
-    message:'Required field.'
-  })
-  @IsEmail({},{
-    message:'Please enter a valid email.'
-  })
-  email:string
+ 
 
 
   @IsNotEmpty({
