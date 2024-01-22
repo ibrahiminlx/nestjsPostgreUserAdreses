@@ -6,7 +6,7 @@ This project is developed using Sequelize, PostgreSQL, and NestJS. It is designe
 
 The application provides a set of API endpoints that can be accessed and tested using the provided Postman collection. Below is the output from the Postman collection, which provides information on the basic usage of the APIs.
 
-# Postman Collection: userAdreses
+# User Addresses
 
 ## createUser
 
