@@ -1,6 +1,6 @@
 import { AllowNull, Column, DataType, Default, HasMany, Model, PrimaryKey, Table, Unique } from 'sequelize-typescript';
 import { Address } from './address.entity';
-import { Col } from 'sequelize/types/utils';
+import { IsIn } from 'class-validator';
 
 
 @Table
@@ -25,6 +25,24 @@ export class User extends Model<User> {
   @Unique(true)
   @Column
   email: string
+
+  @AllowNull(false)
+  @Unique(true)
+  @Column
+  phoneNumber: string
+
+  @AllowNull(false)
+  @Column
+  password: string
+
+  @AllowNull(false)
+  @Column
+  @IsIn(['male', 'female'], {
+    message: 'Gender must be either "male" or "female".',
+  })
+  gender: string;
+
+
 
   @Column({
     type: DataType.BOOLEAN,

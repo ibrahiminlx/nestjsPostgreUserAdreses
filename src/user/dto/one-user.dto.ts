@@ -1,4 +1,4 @@
-import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
+import { IsEmail, IsNotEmpty, IsString, IsUUID } from 'class-validator';
 
 export class OneUserDto {
   @IsString({
@@ -14,3 +14,16 @@ export class OneUserDto {
 
 
 }
+
+export class OneAddressDto {
+  @IsNotEmpty({
+    message:'Required field.'
+  })
+  @IsUUID('1', {
+    message: 'Invalid UUID1 format.',
+  })
+  addressId:string
+
+
+}
+
