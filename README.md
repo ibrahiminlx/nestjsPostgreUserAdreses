@@ -123,7 +123,8 @@ The application provides a set of API endpoints that can be accessed and tested 
   - [Example Response](#example-response)
 
 ## Example Response
-...json
+
+```json
 {
     "code": 200,
     "error": false,
